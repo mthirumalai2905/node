@@ -30,3 +30,11 @@ The `REPL` feature of Node is very useful in experimenting with Node.js codes an
 **P** - `Print` Prints the result
 
 **L** - `Loops` the above command until the user presses ctrl-c twice
+
+```bash
+// Create files thorugh terminal
+type > index.js
+
+//Read the inside file
+type index.js
+```
