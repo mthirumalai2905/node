@@ -383,4 +383,25 @@ undefined
   },
   promises: [Getter]
 }
->```
+>
+```
+## Modules in Node JS
+**File System**
+```javascript
+const fs = require('fs');
+
+//creating a new file
+fs.writeFileSync("read.txt", "Bench Press 100 kilos withing 3 months")
+
+//It overides the previous data present in the file
+fs.writeFileSync("read.txt", "Bench Press 100 kilos withing 3 months will this overide the previous data")
+
+//Add datas to the existing file
+fs.appendFileSync("read.txt", " \nLol am already benching 100 wbu ?")
+
+//Reading the existing data
+const buf_data = fs.readFileSync("read.txt", "utf-8");//Takes 2 arguments file name and encoding-type
+console.log(buf_data)
+
+//Buffer - is an additional data type available in node to store binary datas
+```
