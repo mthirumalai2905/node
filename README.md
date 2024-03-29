@@ -32,6 +32,17 @@ The `REPL` feature of Node is very useful in experimenting with Node.js codes an
 **L** - `Loops` the above command until the user presses ctrl-c twice
 
 ```bash
+node
+Welcome to Node.js v20.10.0.
+Type ".help" for more information.
+> 5 + 3
+8
+> _ + 2
+10
+>
+```
+
+```bash
 // Create files thorugh terminal
 type > index.js
 
