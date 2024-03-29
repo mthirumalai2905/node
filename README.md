@@ -49,7 +49,7 @@ type > index.js
 //Read the inside file
 type index.js
 ```
-** In REPL press Tab twice**
+**In REPL press Tab twice**
 ```bash
 AbortController
 AbortSignal
