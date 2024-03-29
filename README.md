@@ -20,8 +20,13 @@ for a runtime javascript but it didnt work
 3) Real time chat Applications
 
 ## Node JS REPL
+
 The `REPL` feature of Node is very useful in experimenting with Node.js codes and to debug javascript codes.
+
 **R** - `Read` user's input parses the input into Javascript data-structure,and stores in memory
+
 **E** - `Eval` Takes and evaluates the data structure
+
 **P** - `Print` Prints the result
+
 **L** - `Loops` the above command until the user presses ctrl-c twice
