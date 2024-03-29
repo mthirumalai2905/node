@@ -168,64 +168,9 @@ dgram
 diagnostics_channel
 dns
 domain
-encodeURI
-encodeURIComponent
-escape
-eval
-events
-fetch
-fs
-global
-globalThis
-http
-http2
-https
-inspector
-isFinite
-isNaN
-module
-net
-os
-parseFloat
-parseInt
-path
-perf_hooks
-performance
-process
-punycode
-querystring
-queueMicrotask
-readline
-repl
-require
-setImmediate
-setInterval
-setTimeout
-stream
-string_decoder
-structuredClone
-sys
-timers
-tls
-trace_events
-tty
-undefined
-unescape
-url
-util
-v8
-vm
-wasi
-worker_threads
-zlib
+....
 
-__proto__
-hasOwnProperty
-isPrototypeOf
-propertyIsEnumerable
-toLocaleString
-toString
-valueOf
+
 
 constructor
 
@@ -262,4 +207,56 @@ console.log(buf_data)
 fs.renameSync("read.txt", "readandwrite.txt");
 
 //Buffer - is an additional data type available in node to store binary datas
+```
+
+## CRUD OPERATIONS USING FS MODULES
+```javascript
+const fs = require('fs');
+
+try {
+  // Create the folder
+  try {
+    fs.mkdirSync('folder');
+    console.log("Folder created successfully");
+  } catch (err) {
+    if (err.code === 'EEXIST') {
+      console.log("Folder already exists");
+    } else {
+      throw err; // Throw error if it's not 'EEXIST'
+    }
+  }
+
+  // Create a new file
+  fs.writeFileSync('folder/new.txt', 'Node creating file within the folder');
+  console.log("File created successfully");
+
+  // Append data to the file
+  fs.appendFileSync('folder/new.txt', '\nappending some data');
+  console.log("Data appended to the file successfully");
+
+  // Read data from file
+  const data = fs.readFileSync('folder/new.txt', 'utf8');
+  console.log("Data read from file:", data);
+
+  // Copy data from one file to another
+  const sourceData = fs.readFileSync('folder/new.txt', 'utf8');
+  fs.writeFileSync('folder/blah.txt', sourceData);
+  console.log("Data copied to another file successfully.");
+
+  // Rename the file
+  fs.renameSync('folder/new.txt', 'folder/renamed.txt');
+  console.log("File renamed successfully.");
+
+  // Delete the file
+  fs.unlinkSync('folder/blah.txt');
+  console.log("File deleted successfully.");
+
+  // Delete the folder
+  fs.rmdirSync('folder');
+  console.log("Folder deleted successfully.");
+
+} catch (err) {
+  console.error("Error occurred:", err);
+}
+
 ```
