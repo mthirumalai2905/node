@@ -17,7 +17,7 @@ console.log(objData.name);
 //difference between JSON and objects
 // you cant access property via jsons u have to convert it into objects
 
-fs.writeFileSync('datas.txt', jsonData);
+fs.writeFileSync('datas.json', jsonData);
 
 const data = fs.readFileSync('datas.txt', 'utf-8');
 console.log(data);
