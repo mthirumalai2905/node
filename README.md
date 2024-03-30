@@ -283,3 +283,11 @@ const {add,sub} = require('./file_name');
 console.log(add(5,5));
 console.log(sub(10,5));
 ```
+<br>
+```javascript
+//console.log(__dirname);: This will print out the absolute path of the directory where the //current JavaScript file resides.
+
+//console.log(__filename);: This will print out the absolute path of the current JavaScript //file itself.
+console.log(__filename);
+console.log(__dirname);
+```
