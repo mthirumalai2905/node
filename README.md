@@ -260,3 +260,26 @@ try {
 }
 
 ```
+## Importing and Exporting module
+
+```javascript
+// The file which will be exported
+
+const add(a,b){
+return a + b
+}
+
+const sub(a,b){
+return a - b
+}
+
+module.exports = {add, sub}
+```
+
+```javascript
+// The file which will be importing that module
+const {add,sub} = require('./file_name');
+
+console.log(add(5,5));
+console.log(sub(10,5));
+```
