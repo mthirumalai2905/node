@@ -2,24 +2,21 @@ const express = require('express');
 const app = express();
 const PORT = 8000;
 
-// Route handler for '/'
-app.get('/', (req, res) => {
-    // Extracting the directory typed by the user
-    const directory = req.url;
+// Set the views directory
+app.set('views', __dirname + '/views');
 
-    // Sending a response
-    res.send("Hello from express");
+// Set the view engine to use Handlebars
+app.set('view engine', 'hbs');
 
-    // Logging the directory typed by the user to the console
-    console.log("Directory: ", directory);
+// Define routes
+app.get("/", (req, res) => {
+    res.render('index'); // No need to specify the file extension
 });
 
-// Route handler for '/hello'
 app.get('/hello', (req, res) => {
     res.send("Hello to you too");
     console.log('Hello');
 });
-
 
 // Start the server
 app.listen(PORT, () => {
