@@ -301,3 +301,11 @@ const templatePath = path.join(__dirname, "../templates");
 
 app.set("views", templatePath);
 ```
+
+## Partials
+
+```javascript
+// Similar to components structure used in React
+
+{{>header}}
+```
