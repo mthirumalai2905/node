@@ -77,3 +77,7 @@ const createDocument = async () => {
   
   // Call the function to create and save the document
   createDocument();
+
+
+
+//Schema -> Model -> Document
